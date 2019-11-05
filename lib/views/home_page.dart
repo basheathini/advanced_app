@@ -17,10 +17,10 @@ class _HomePageState extends State<HomePage> {
         _batteryLevel = batteryLevel;
       });
     }on PlatformException catch(error) {
+      print(error);
       setState(() {
         _batteryLevel = null;
       });
-
     }
   }
 
@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Text('Battery levels : $_batteryLevel.', textAlign: TextAlign.center,)
+          Text('Battery levels : $_batteryLevel', textAlign: TextAlign.center,)
         ],
 
       ),
